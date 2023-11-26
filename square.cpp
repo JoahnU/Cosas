@@ -35,12 +35,12 @@ class Square{
   }
   bool contains(int px, int py){
      bool contain = true;
-      if(px > x1 && py > y1 || py == y1 && px < x2 || px == x2 && py < y2 || py == y2){
-        return contain;
+      if((px > x1 || px == x1) && (py > y1 || py == y1) && (px < x2 || px == x2) && (py < y2 || py == y2)){
+        contain = true;
       }else{
         contain = false;
-        return contain;
-      }
+        
+      }return contain;
   }
 };
 int main ()
